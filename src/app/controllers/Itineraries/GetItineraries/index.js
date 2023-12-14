@@ -26,7 +26,7 @@ async function GetItineraries(req, res) {
         result,
       });
     }
-    await Itineraries.find().then((Itinerary) => {
+    await Itineraries.find({publicVisible: true}).then((Itinerary) => {
       result = Itinerary;
     });
 
